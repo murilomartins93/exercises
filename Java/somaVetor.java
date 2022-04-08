@@ -1,7 +1,7 @@
 import java.util.Locale;
 import java.util.Scanner;
 
-public class somaVetor {
+public class SomaVetor {
 
 	public static void main(String[] args) {
 

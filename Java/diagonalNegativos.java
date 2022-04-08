@@ -1,7 +1,7 @@
 import java.util.Locale;
 import java.util.Scanner;
 
-public class diagonalNegativos {
+public class DiagonalNegativos {
 
 	public static void main(String[] args) {
 		

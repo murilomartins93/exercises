@@ -1,7 +1,7 @@
 import java.util.Locale;
 import java.util.Scanner;
 
-public class menorDeTres {
+public class MenorDeTres {
 
 	public static void main(String[] args) {
 		

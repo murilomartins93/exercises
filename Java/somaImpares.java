@@ -1,7 +1,7 @@
 import java.util.Locale;
 import java.util.Scanner;
 
-public class somaImpares {
+public class SomaImpares {
 
 	public static void main(String[] args) {
 		

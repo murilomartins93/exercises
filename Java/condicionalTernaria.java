@@ -1,5 +1,5 @@
 
-public class condicionalTernaria {
+public class CondicionalTernaria {
 
 	public static void main(String[] args) {
 		
