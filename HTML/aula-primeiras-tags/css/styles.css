@@ -1,0 +1,29 @@
+* {
+    font-size: 20px;
+}
+
+h1, h2 {
+    color: #00f;
+}
+
+h1:hover {
+    color: lightblue;
+    cursor: pointer;
+}
+
+p {
+    color: green;
+}
+
+.orange {
+    color: orange;
+}
+
+.card img {
+    width: 200px;
+    height: 200px;
+}
+
+#titles {
+    background-color: aqua;
+}
