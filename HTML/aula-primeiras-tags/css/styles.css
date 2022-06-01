@@ -1,29 +1,100 @@
+:root{
+    --black: #000;
+    --gray: #555;
+    --lightgray: #d2d2d2;
+    --light-lightgray: #eee;
+    --white: #fff;    
+    --aqua-blue: #8be8f4;
+    --orange: #eb8f05;
+    --forest-green: #5aa04e;
+    --background-blue: #131a22;
+    --background-bluegray: #232f3e;
+    --background-gray: #ccc;
+    --background-lightgray: #ddd;
+}
+
 * {
     font-size: 20px;
+    margin: 0;
 }
 
-h1, h2 {
-    color: #00f;
+body {
+    margin: 0;
 }
 
-h1:hover {
-    color: lightblue;
-    cursor: pointer;
+header {
+    background-color: var(--background-blue);
+    padding: 20px;
 }
 
-p {
-    color: green;
+nav h1 {
+    color: var(--white);
 }
 
-.orange {
-    color: orange;
+a {
+    color: var(--aqua-blue);
+    text-decoration: none;
+}
+
+.section-categories {
+    background-color: var(--background-bluegray);
+    padding: 40px;
+}
+
+.section-categories h2 {
+    color: var(--orange);
+}
+
+.section-categories li {
+    color: var(--lightgray);
+}
+
+.section-titles {
+    background-color: var(--background-gray);
+    padding: 40px;
+}
+
+.section-titles h2 {
+    color: var(--gray);
+    padding: 40px;
 }
 
 .card img {
+    background-color: var(--white);
     width: 200px;
     height: 200px;
+    padding: 10px;
 }
 
-#titles {
-    background-color: aqua;
+.title-card-description {
+    background-color: var(--background-lightgray);
+}
+
+.title-card-description h3 {
+    color: var(--black);
+}
+
+.title-price {
+    color: var(--forest-green);
+    font-size: 28px;
+}
+
+.title-price span {
+    font-size: 18px;
+}
+
+.section-about {
+    background-color: var(--background-bluegray);
+    padding: 40px;
+    color: var(--lightgray)
+}
+
+.section-about h2 {
+    color: var(--orange);
+}
+
+footer {
+    color: var(--light-lightgray);
+    background-color: var(--background-blue);
+    padding: 20px;
 }
