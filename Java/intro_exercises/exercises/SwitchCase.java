@@ -11,7 +11,7 @@ public class SwitchCase {
 		switch (x) {
 		case 1:
 			dia = "domingo";
-			break;
+			break; 
 		case 2:
 			dia = "segunda";
 			break;
