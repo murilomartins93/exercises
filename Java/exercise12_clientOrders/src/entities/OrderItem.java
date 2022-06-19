@@ -13,14 +13,14 @@ public class OrderItem {
 	public OrderItem(Integer quantity, Product product) {	
 		this.quantity = quantity;
 		this.product = product;
-		price = subTotal();
+		price = product.getPrice();
 	}
 		
 	public Double getPrice() {
 		return price;
 	}
 
-	public Integer getQuantity() {
+	public Integer getQuantity()  {
 		return quantity;
 	}
 
@@ -37,20 +37,15 @@ public class OrderItem {
 	}
 
 	public double subTotal(){
-		price = quantity * product.getPrice();
-		return price;
+		return price * quantity;
 	}
 	
+	@Override
 	public String toString() {
-		StringBuilder sb = new StringBuilder();
-		sb.append(product.getName());
-		sb.append(", $");
-		sb.append(String.format("%.2f", product.getPrice()));
-		sb.append(", Quantity: ");
-		sb.append(quantity);
-		sb.append(", Subtotal: $");
-		sb.append(String.format("%.2f", subTotal()));
-		return sb.toString();
-	}
-
+        StringBuilder sb = new StringBuilder();
+        sb.append(product);
+        sb.append(", Quantity: " + quantity);
+        sb.append(", Subtotal: $" + String.format("%.2f", subTotal()));
+        return sb.toString();
+    }
 }

@@ -28,39 +28,33 @@ public class Program {
 		String email = sc.nextLine();
 		System.out.print("Birth date (DD/MM/YYYY): ");
 		Date birthDate = sdf.parse(sc.nextLine());
-		Client client = new Client(name, email, birthDate);
-		
 		System.out.println();
 		System.out.println("Enter order data:");
 		System.out.print("Status: ");
 		String orderStatus = sc.nextLine();
-		Date moment = new Date();
-		Order order = new Order(moment, OrderStatus.valueOf(orderStatus), client);
+		Order order = new Order(new Date(), OrderStatus.valueOf(orderStatus), new Client(name, email, birthDate));
 		
 		System.out.println();
 		System.out.print("How many items to this order? ");
 		int n = sc.nextInt();
-		sc.nextLine();
+
 		System.out.println();
 		
 		for(int i = 1; i <= n; i++) {
 			System.out.printf("Enter #%d item data:%n", i);
 			System.out.print("Product name: ");	
+			sc.nextLine();
 			String productName = sc.nextLine();
 			System.out.print("Product price: ");
-			Double productPrice = sc.nextDouble();
+			double productPrice = sc.nextDouble();
 			System.out.print("Quantity: ");
-			Integer productQuantity = sc.nextInt(); 
-			sc.nextLine();
-			OrderItem item = new OrderItem(productQuantity, new Product(productName, productPrice));
-			order.addItem(item);
+			int productQuantity = sc.nextInt(); 
+			order.addItem(new OrderItem(productQuantity, new Product(productName, productPrice)));
 		}
 		
-		System.out.println();
-		System.out.println("ORDER SUMMARY:");
-		System.out.println(order);
-	
+		System.out.printf("%nORDER SUMMARY:%n");
+        System.out.println(order);
+        
 		sc.close();
 	}
-
 }

@@ -28,4 +28,12 @@ public class Product {
 	public void setPrice(Double price) {
 		this.price = price;
 	}
+	
+	@Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(name);
+        sb.append(", $" + String.format("%.2f", price));
+        return sb.toString();
+    }
 }

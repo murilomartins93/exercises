@@ -1,6 +1,6 @@
 package entities;
 
-public class ImportedProduct extends Product {
+public final class ImportedProduct extends Product {
 
 	private Double customsFee;
 	
@@ -27,13 +27,7 @@ public class ImportedProduct extends Product {
 	
 	@Override
 	public String priceTag() {
-		StringBuilder sb = new StringBuilder();
-		sb.append(getName());
-		sb.append(" $ ");
-		sb.append(String.format("%.2f", totalPrice()));
-		sb.append(" (Customs fee: $");
-		sb.append(String.format("%.2f", customsFee));
-		sb.append(")");
-		return sb.toString();
+		return name + " $ " + String.format("%.2f", totalPrice()) 
+		+ " (Customs fee: $ " + String.format("%.2f", customsFee) + ")";
 	}
 }

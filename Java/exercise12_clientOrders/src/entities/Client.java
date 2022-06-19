@@ -44,13 +44,13 @@ public class Client {
 		this.birthDate = birthDate;
 	}
 	
+	@Override
 	public String toString() {
-		StringBuilder sb = new StringBuilder();
-		sb.append(name);
-		sb.append(" (");
-		sb.append(String.format(sdf.format(birthDate)));
-		sb.append(") - ");
-		sb.append(email);
-		return sb.toString();
-	}
+
+        StringBuilder sb = new StringBuilder();
+        sb.append(name + " ");
+        sb.append("(" + String.format(sdf.format(birthDate)) + ") - ");
+        sb.append(email);
+        return sb.toString();
+    }
 }

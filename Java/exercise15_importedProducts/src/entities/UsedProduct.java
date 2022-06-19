@@ -3,7 +3,7 @@ package entities;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class UsedProduct extends Product {
+public final class UsedProduct extends Product {
 
 	private Date manufactureDate;
 	
@@ -28,13 +28,7 @@ public class UsedProduct extends Product {
 	
 	@Override
 	public String priceTag() {
-		StringBuilder sb = new StringBuilder();
-		sb.append(getName());
-		sb.append(" $ ");
-		sb.append(String.format("%.2f", getPrice()));
-		sb.append(" (Manufacture date: ");
-		sb.append(sdf.format(manufactureDate));
-		sb.append(")");
-		return sb.toString();
+		return name + " (used) $ " + String.format("%.2f", price) 
+		+ " (Manufacture date: " + sdf.format(manufactureDate) +")";
 	}
 }

@@ -2,8 +2,8 @@ package entities;
 
 public class Product {
 
-	private String name;
-	private Double price;
+	protected String name;
+	protected Double price;
 	
 	public Product() {
 	}
@@ -30,10 +30,6 @@ public class Product {
 	}
 
 	public String priceTag() {
-		StringBuilder sb = new StringBuilder();
-		sb.append(name);
-		sb.append(" $ ");
-		sb.append(String.format("%.2f", price));
-		return sb.toString();
+		return name + " $ " + String.format("%.2f", price);
 	}
 }
