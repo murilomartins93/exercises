@@ -25,6 +25,7 @@ public class Program {
 		File path = new File("C:\\Temp\\srcFile.csv");
 		File sourcePath = new File (path.getParent());
 		boolean folderPathSuccess = new File(sourcePath + "\\out").mkdir();
+		System.out.println("Success! Folder created!" + folderPathSuccess);
 		
 		String targetFilePath = sourcePath + "\\out\\summary.csv";
 			
@@ -40,23 +41,24 @@ public class Program {
 				itemLine = br.readLine();
 			}
 			
-		}
-		catch(IOException e){
-			System.out.println("Error: " + e.getMessage());
-		}
-		
-		try(BufferedWriter bw = new BufferedWriter(new FileWriter(targetFilePath))) {
-			
-			for(Product product : products) {
-				bw.write(product.getName() + "," + String.format("%.2f", product.total()));
-				bw.newLine();
+			try(BufferedWriter bw = new BufferedWriter(new FileWriter(targetFilePath))) {
+				
+				for(Product product : products) {
+					bw.write(product.getName() + "," + String.format("%.2f", product.total()));
+					bw.newLine();
+				}
+				
+			}
+			catch(IOException e){
+				System.out.println("Error: " + e.getMessage());
 			}
 			
+			System.out.println("Success! File readed and new File created with subtotal!");
 		}
 		catch(IOException e){
 			System.out.println("Error: " + e.getMessage());
 		}
-		
+				
 		sc.close();
 	}
 	
