@@ -2,7 +2,7 @@ package model.entities;
 
 public class Employee implements Comparable<Employee> {
 	
-	private String name;
+	private String name; 
 	private Double salary;
 
 	public Employee(String name, Double salary) {
