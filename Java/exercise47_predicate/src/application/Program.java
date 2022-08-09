@@ -31,7 +31,7 @@ public class Program {
 		// Declared Lambda Function
 		double min = 100.0;
 		Predicate<Product> pred = p -> p.getPrice() >= min; 
-		list.removeIf(pred); 
+		list.removeIf(pred);
 		
 		list.removeIf(p -> p.getPrice() >= 100.0); // Lambda function in-line
 		
