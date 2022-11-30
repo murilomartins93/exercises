@@ -3,6 +3,7 @@ package com.murilomartins.aula.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.murilomartins.aula.dto.PersonDTO;
 import com.murilomartins.aula.dto.PersonDepartmentDTO;
 import com.murilomartins.aula.entities.Department;
 import com.murilomartins.aula.entities.Person;
@@ -33,4 +34,18 @@ public class PersonService {
 		return new PersonDepartmentDTO(entity);
 	}
 		
+	
+	public PersonDTO insert(PersonDTO dto) {
+		Person entity = new Person();
+		entity.setName(dto.getName());
+		entity.setSalary(dto.getSalary());
+		
+		Department dept = departmentRepository.getReferenceById(dto.getDepartmentId());
+		
+		entity.setDepartment(dept);
+		
+		entity = repository.save(entity);
+		
+		return new PersonDTO(entity);
+	}
 }
